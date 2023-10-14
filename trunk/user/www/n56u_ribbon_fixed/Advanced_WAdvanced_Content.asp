@@ -44,8 +44,8 @@ function initial(){
 			showhide_div("row_ldpc", 1);
 		} else if (wid==7615 || wid==7915){
 			showhide_div("row_ldpc", 1);
-			showhide_div("row_80211kv", 1);
-			showhide_div("row_80211r", 1);
+			showhide_div("row_80211kv", 0);
+			showhide_div("row_80211r", 0);
 		} 
 	}
 
@@ -69,7 +69,7 @@ function initial(){
 		showhide_div("row_txbf", 1);
 
 	if (support_5g_mumimo())
-		showhide_div("row_mumimo", 1);
+		showhide_div("row_mumimo", 0);
 
 	load_body();
 
