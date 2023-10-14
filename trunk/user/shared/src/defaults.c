@@ -34,7 +34,7 @@ struct nvram_pair router_defaults[] = {
 
 	/* Miscellaneous parameters */
 	{ "time_zone", DEF_TIMEZONE },
-	{ "log_float_ui", "1" },		/* WebUI syslog float panel mode */
+	{ "log_float_ui", "0" },		/* WebUI syslog float panel mode */
 	{ "log_ipaddr", "" },			/* syslog recipient IP */
 	{ "log_port", "514" },			/* syslog recipient Port */
 	{ "log_level", "0" },			/* Bitmask 0:off 1:denied 2:accepted */
@@ -179,7 +179,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_closed", "0" },			/* Closed (hidden) network */
 	{ "wl_macmode", "disabled" },		/* "allow" only, "deny" only, or "disabled"(allow all) */
 	{ "wl_maclist", "" },			/* xx:xx:xx:xx:xx:xx ... */
-	{ "wl_wme", "1" },			/* WME mode (off|on) */
+	{ "wl_wme", "0" },			/* WME mode (off|on) */
 	{ "wl_wme_no_ack", "off" },		/* WME No-Acknowledgment mode */
 	{ "wl_auth_mode", "psk" },		/* Network authentication mode: WPAx Personal */
 	{ "wl_key", "1" },			/* Current WEP key */
@@ -235,7 +235,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_HT_AMSDU", "0" },
 	{ "wl_HT_BAWinSize", "64" },
 #endif
-	{ "wl_HT_80211KV", "1" },
+	{ "wl_HT_80211KV", "0" },
 	{ "wl_HT_80211R", "0" },
 	{ "wl_HT_MpduDensity", "5" },
 	{ "wl_HT_AutoBA", "1" },
@@ -261,12 +261,12 @@ struct nvram_pair router_defaults[] = {
 
 	// ApCli 5Ghz
 	{ "wl_sta_ssid", "" },
-	{ "wl_sta_auth_mode", "open" },
+	{ "wl_sta_auth_mode", "psk" },
 	{ "wl_sta_wpa_mode", "2" },
 	{ "wl_sta_crypto", "aes" },
 	{ "wl_sta_wpa_psk", "" },
-	{ "wl_sta_wisp", "0" },
-	{ "wl_sta_auto", "0" },
+	{ "wl_sta_wisp", "1" },
+	{ "wl_sta_auto", "1" },
 #endif
 
 #if BOARD_HAS_2G_RADIO
@@ -293,7 +293,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_HT_BW", "1" },
 	{ "rt_HT_EXTCHA", "1" },
 	{ "rt_HT_OpMode", "0" },
-	{ "rt_wme", "1" },
+	{ "rt_wme", "0" },
 	{ "rt_wme_no_ack", "off" },
 	{ "rt_IgmpSnEnable", "1" },
 	{ "rt_TxPower", "100" },
@@ -334,7 +334,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_HT_RDG", "0" },
 	{ "rt_HT_AMSDU", "0" },
 	{ "rt_HT_MpduDensity", "5" },
-	{ "rt_HT_80211KV", "1" },
+	{ "rt_HT_80211KV", "0" },
 	{ "rt_HT_80211R", "0" },
 #if defined (USE_WID_2G) && (USE_WID_2G==7615 || USE_WID_2G==7915)
 	{ "rt_HT_BAWinSize", "256" },
@@ -367,12 +367,12 @@ struct nvram_pair router_defaults[] = {
 
 	// ApCli 2.4Ghz
 	{ "rt_sta_ssid", "" },
-	{ "rt_sta_auth_mode", "open" },
+	{ "rt_sta_auth_mode", "psk" },
 	{ "rt_sta_wpa_mode", "2" },
 	{ "rt_sta_crypto", "aes" },
 	{ "rt_sta_wpa_psk", "" },
-	{ "rt_sta_wisp", "0" },
-	{ "rt_sta_auto", "0" },
+	{ "rt_sta_wisp", "1" },
+	{ "rt_sta_auto", "1" },
 #endif
 
 	// USB related
@@ -419,7 +419,7 @@ struct nvram_pair router_defaults[] = {
 	{ "hdd_spindt", "0" },
 	{ "hdd_apmoff", "0" },
 
-	{ "ip6_service", "dhcp6" },			/* IPV6 */
+	{ "ip6_service", "" },			/* IPV6 */
 	{ "ip6_wan_if", "0" },
 
 	{ "ip6_6in4_remote", "" },
@@ -573,7 +573,7 @@ struct nvram_pair router_defaults[] = {
 	{ "china_dns", "223.5.5.5#53" },
 	{ "tunnel_forward", "8.8.8.8#53" },
 	{ "ssp_dns_ip", "2" },
-	{ "socks5_enable", "0" },
+	{ "socks5_enable", "nil" },
 	{ "socks5_wenable", "0" },
 	{ "socks5_port", "1088" },
 	{ "socks5_aenable", "0" },
@@ -582,7 +582,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ss_cgroups", "0" },
 	{ "ss_cgoups_cpu_s", "512" },
 	{ "ss_cgoups_mem_s", "20M" },
-	{ "ss_watchcat", "1" },
+	{ "ss_watchcat", "0" },
 	{ "lan_con", "0" },
 	{ "ss_chnroute_url", "https://ispip.clang.cn/all_cn.txt"},
 	{ "ss_adblock_url", "https://gitee.com/privacy-protection-tools/anti-ad/raw/master/anti-ad-for-dnsmasq.conf"},
@@ -979,7 +979,7 @@ struct nvram_pair router_defaults[] = {
 #endif
 
 	{ "telnetd", "0" },
-	{ "sshd_enable", "1" },
+	{ "sshd_enable", "0" },
 	{ "wins_enable", "0" },
 	{ "lltd_enable", "1" },
 	{ "adsc_enable", "0" },
@@ -1010,7 +1010,7 @@ struct nvram_pair router_defaults[] = {
 	{ "front_led_usb", "1" },
 	{ "front_led_pwr", "1" },
 
-	{ "ether_igmp", "1" },
+	{ "ether_igmp", "0" },
 	{ "ether_uport", "0" },		/* WAN port in AP mode is static upstream by default */
 	{ "ether_m2u", "2" },
 	{ "ether_green", "1" },
@@ -1046,10 +1046,10 @@ struct nvram_pair router_defaults[] = {
 	{ "ether_flow_lan7", "0" },
 #endif
 #endif
-	{ "hw_nat_mode", "1" },
+	{ "hw_nat_mode", "0" },
 	{ "sw_nat_mode", "0" },
 #if defined(USE_SFE)
-	{ "sfe_enable", "2" },
+	{ "sfe_enable", "0" },
 #endif
 	{ "fw_syn_cook", "0" },
 	{ "fw_mac_drop", "0" },
