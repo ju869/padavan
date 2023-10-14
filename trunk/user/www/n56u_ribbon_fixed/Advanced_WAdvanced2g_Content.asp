@@ -52,8 +52,8 @@ function initial(){
 			showhide_div("row_ldpc", 1);
 		} else if (wid==7615 || wid==7915){
 			showhide_div("row_ldpc", 1);
-			showhide_div("row_80211kv", 1);
-			showhide_div("row_80211r", 1);
+			showhide_div("row_80211kv", 0);
+			showhide_div("row_80211r", 0);
 		}
 	}
 
